@@ -39,6 +39,7 @@ const databaseConfig: DatabaseConfig & { orm: Partial<OrmConfig> } = {
       client: 'sqlite',
       connection: {
         filename: Application.tmpPath('db.sqlite3'),
+
       },
       useNullAsDefault: true,
       healthCheck: false,
@@ -63,6 +64,7 @@ const databaseConfig: DatabaseConfig & { orm: Partial<OrmConfig> } = {
         user: Env.get('DB_USER', 'lucid') as string,
         password: Env.get('DB_PASSWORD', 'lucid') as string,
         database: Env.get('DB_NAME', 'lucid') as string,
+        ssl: true
       },
       healthCheck: false,
     },
@@ -87,6 +89,7 @@ const databaseConfig: DatabaseConfig & { orm: Partial<OrmConfig> } = {
         password: Env.get('DB_PASSWORD', 'lucid') as string,
         database: Env.get('DB_NAME', 'lucid') as string,
       },
+
       healthCheck: false,
     },
   },

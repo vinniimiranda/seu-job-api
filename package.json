@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "node ace build",
-    "start": "node ace serve --watch",
+    "start": "node build/server.js",
+    "dev": "node ace serve --watch",
     "lint": "eslint . --ext=.ts"
   },
   "devDependencies": {
@@ -24,6 +25,7 @@
     "@adonisjs/core": "^5.0.0-preview-rc",
     "@adonisjs/fold": "^6.0.0",
     "@adonisjs/lucid": "^8.2.2",
+    "pg": "^8.3.0",
     "proxy-addr": "^2.0.6",
     "reflect-metadata": "^0.1.13",
     "source-map-support": "^0.5.19"
