@@ -22,6 +22,7 @@ import Route from '@ioc:Adonis/Core/Route'
 
 Route.post('register', 'AuthController.register')
 Route.get('jobs', 'JobsController.index')
+Route.get('jobs/:id', 'JobsController.show')
 Route.post('/login', 'AuthController.login')
 Route.post('/logout', async ({ auth }) => {
   await auth.use('api').logout()
